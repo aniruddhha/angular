@@ -10,4 +10,5 @@ export class AppComponent {
   version = 16
 
   libs = ['jquery', 'handlebars', 'extjs', 'polymer', 'dojo', 'chartjs', 'plotyjs']
+  isVs = true
 }
