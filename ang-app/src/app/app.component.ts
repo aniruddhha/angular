@@ -11,4 +11,7 @@ export class AppComponent {
 
   libs = ['jquery', 'handlebars', 'extjs', 'polymer', 'dojo', 'chartjs', 'plotyjs']
   isVs = true
+
+  dt = new Date()
+  amt = 1000
 }

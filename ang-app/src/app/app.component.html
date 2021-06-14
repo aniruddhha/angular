@@ -9,3 +9,9 @@
 <div class="cnt-cntr mgb">
   <input type="text" *ngIf="isVs">
 </div>
+<div>
+  <p> Date is : {{dt | date:"dd MMM yyyy"}} </p>
+  <p> Framework is : {{framework | uppercase}} </p>
+  <p> Amount is : {{amt | currency:"INR"}} </p>
+  <p> Sub : {{ (framework | slice:2) | uppercase }} </p>
+</div>
