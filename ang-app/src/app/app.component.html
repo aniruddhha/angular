@@ -1,3 +1,8 @@
-<div>
+<div class="cnt-cntr">
   <h1> welcome to {{framework}} {{version}} </h1>
+</div>
+<div>
+  <ul>
+    <li *ngFor="let lb of libs">{{lb.toUpperCase()}}</li>
+  </ul>
 </div>
