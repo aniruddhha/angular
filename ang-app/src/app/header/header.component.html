@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="box" style="{{bg}}">
+        box1
+    </div>
+    <div class="box" [style]="bg">
+        box2
+    </div>
+    <div class="box" [style]="bg">
+        box3
+    </div>
+    <div class="box" [style]="bg">
+        box4
+    </div>
+</div>
+<div class="cntr">
+    <input type="text" #cl>
+    <input type="button" value="Okay" (click)="onColor(cl.value)">
+</div>
