@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { DtIpComponent } from './dt-ip/dt-ip.component';
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DtIpComponent
+    DtIpComponent,
+    AboutComponent,
+    HomeComponent,
+    ContactComponent
     //components
     //pipes
   ],
