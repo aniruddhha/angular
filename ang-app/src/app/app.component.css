@@ -1,8 +1,9 @@
 .cnt-cntr {
-    border: 1px solid red;
+    border: 1px solid gainsboro;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 1em;
 }
 
 .mgb {

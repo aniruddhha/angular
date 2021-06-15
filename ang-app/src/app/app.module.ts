@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { TempFromComponent } from './temp-from/temp-from.component';
+import { RectFormComponent } from './rect-form/rect-form.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { ContactComponent } from './contact/contact.component';
     DtIpComponent,
     AboutComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    TempFromComponent,
+    RectFormComponent
     //components
     //pipes
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule // for template driven forms
     //import thirdparty modueles
   ],
   providers: [

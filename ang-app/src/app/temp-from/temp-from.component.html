@@ -1,0 +1,16 @@
+<div>
+    <h4>Template Driven Form</h4>
+</div>
+<form class="brd" #frm="ngForm" (ngSubmit)="frmSub(frm)">
+    <div class="frm">
+        <input type="text" name="userName" placeholder="Username" ngModel>
+        <input type="text" name="email" placeholder="Email" ngModel>
+    </div>
+    <div class="frm">
+        <input type="text" name="mobile" placeholder="Mobile" ngModel>
+        <input type="text" name="password" placeholder="Password" ngModel>
+    </div>
+    <div class="frm">
+        <input type="submit">
+    </div>
+</form>
