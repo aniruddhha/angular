@@ -8,6 +8,9 @@ import { NgForm } from '@angular/forms';
 })
 export class TempFromComponent implements OnInit {
 
+  readonly brdInvalid = '1px solid red'
+  readonly brdValid = '1px solid green'
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,6 +18,7 @@ export class TempFromComponent implements OnInit {
 
   frmSub(frm: NgForm) {
     console.log(frm)
+    console.log(frm.value)
     console.log(`Form Submitted`)
   }
 }

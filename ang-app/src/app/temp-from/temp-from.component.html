@@ -1,16 +1,20 @@
 <div>
     <h4>Template Driven Form</h4>
 </div>
-<form class="brd" #frm="ngForm" (ngSubmit)="frmSub(frm)">
+<form [style.border]="(frm.pristine || frm.valid) ? brdValid : brdInvalid" #frm="ngForm" (ngSubmit)="frmSub(frm)">
     <div class="frm">
-        <input type="text" name="userName" placeholder="Username" ngModel>
-        <input type="text" name="email" placeholder="Email" ngModel>
+        <input [style.border]="usNm.valid ? brdValid : brdInvalid" type="text" name="userName" placeholder="Username"
+            #usNm="ngModel" required ngModel>
+        <input [style.border]="em.valid ? brdValid : brdInvalid" type="text" name="email" placeholder="Email"
+            #em="ngModel" ngModel required>
     </div>
     <div class="frm">
-        <input type="text" name="mobile" placeholder="Mobile" ngModel>
-        <input type="text" name="password" placeholder="Password" ngModel>
+        <input [style.border]="mb.valid ? brdValid : brdInvalid" type="text" name="mobile" placeholder="Mobile"
+            #mb="ngModel" ngModel required>
+        <input [style.border]="pass.valid ? brdValid : brdInvalid" type="text" name="password" placeholder="Password"
+            #pass="ngModel" ngModel required>
     </div>
-    <div class="frm">
+    <div class="frm mg">
         <input type="submit">
     </div>
 </form>
