@@ -14,6 +14,14 @@
         <input [style.border]="pass.valid ? brdValid : brdInvalid" type="text" name="password" placeholder="Password"
             #pass="ngModel" ngModel required>
     </div>
+    <div class="frm">
+        <input type="checkbox" value="plc" name="device" ngModel (ngModelChange)="chkCh($event)">
+        <select name="dvType" ngModel (ngModelChange)="chkCh($event)">
+            <option> Laptop </option>
+            <option> Desktop </option>
+            <option> Mobile </option>
+        </select>
+    </div>
     <div class="frm mg">
         <input type="submit">
     </div>

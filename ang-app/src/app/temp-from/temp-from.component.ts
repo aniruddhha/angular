@@ -21,4 +21,9 @@ export class TempFromComponent implements OnInit {
     console.log(frm.value)
     console.log(`Form Submitted`)
   }
+
+  chkCh(ev: Event) {
+    console.log(ev)
+    console.log('changed')
+  }
 }
