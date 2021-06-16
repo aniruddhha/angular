@@ -15,6 +15,8 @@ export class ContactComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
+    console.log(this.actRt)
     this.actRt.params.subscribe(pr => {
       console.log(pr)
       this.address = pr['addr']
