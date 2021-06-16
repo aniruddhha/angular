@@ -17,7 +17,7 @@
 </div> -->
 
 <div class="cnt-cntr">
-  <a [routerLink]="['/contact']" [routerLinkActive]="'active'">Contact</a>
+  <a [routerLink]="['/contact', 10]" [routerLinkActive]="'active'">Contact</a>
   <a [routerLink]="['/home']" [routerLinkActive]="'active'">Home</a>
   <a [routerLink]="['/about']" [routerLinkActive]="'active'">About</a>
 </div>
@@ -27,5 +27,5 @@
   <a [routerLink]="['/rct']" [routerLinkActive]="'active'">Reactive</a>
 </div>
 
-   
+
 <router-outlet></router-outlet>

@@ -10,7 +10,7 @@ import { TempFromComponent } from './temp-from/temp-from.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact/:addr', component: ContactComponent },
   { path: 'tmp', component: TempFromComponent },
   { path: 'rct', component: RectFormComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
