@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  emittedHead = 1
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onReceive(it: number) {
+    this.emittedHead = it
+  }
 }

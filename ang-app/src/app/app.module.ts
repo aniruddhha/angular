@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { TempFromComponent } from './temp-from/temp-from.component';
 import { RectFormComponent } from './rect-form/rect-form.component';
+import { MenuComponent } from './home/menu/menu.component';
+import { MainComponent } from './home/main/main.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { RectFormComponent } from './rect-form/rect-form.component';
     HomeComponent,
     ContactComponent,
     TempFromComponent,
-    RectFormComponent
+    RectFormComponent,
+    MenuComponent,
+    MainComponent
     //components
     //pipes
   ],

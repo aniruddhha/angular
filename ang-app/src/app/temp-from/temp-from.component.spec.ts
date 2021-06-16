@@ -8,9 +8,9 @@ describe('TempFromComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TempFromComponent ]
+      declarations: [TempFromComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +21,9 @@ describe('TempFromComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should create form', () => {
+    expect(component.ngForm).toBeTruthy();
   });
 });

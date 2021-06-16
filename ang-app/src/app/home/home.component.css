@@ -1,6 +1,6 @@
 .all {
     display: flex;
+    justify-content: space-around;
     height: 90vh;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
 }

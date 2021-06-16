@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./temp-from.component.css']
 })
 export class TempFromComponent implements OnInit {
+
+  @ViewChild(NgForm) ngForm: NgForm | undefined;
 
   readonly brdInvalid = '1px solid red'
   readonly brdValid = '1px solid green'
