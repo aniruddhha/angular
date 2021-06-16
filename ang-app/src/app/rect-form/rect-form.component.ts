@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-rect-form',
@@ -24,7 +24,9 @@ export class RectFormComponent implements OnInit {
       mobile: this.fb.control('', Validators.required),
       password: this.fb.control('', Validators.required),
       device: this.fb.control('', Validators.required),
-      dvType: this.fb.control('', Validators.required)
+      dvType: this.fb.control('', Validators.required),
+      items: this.fb.array([
+      ])
     });
   }
 
@@ -38,5 +40,13 @@ export class RectFormComponent implements OnInit {
 
   ctrl(nm: string): FormControl {
     return this.fg.get(nm) as FormControl // recommended approach 
+  }
+
+  dynItms(): FormArray {
+    return this.fg.get('items') as FormArray
+  }
+
+  addItem() {
+    this.dynItms().push(this.fb.control('', Validators.required))
   }
 }

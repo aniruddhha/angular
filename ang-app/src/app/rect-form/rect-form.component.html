@@ -21,8 +21,12 @@
         </select>
     </div>
     <div class="frm brd pd">
-        <input type="text" placeholder="Shopping Items">
-        <input type="button" value="Add">
+        <input type="button" value="Add" (click)="addItem()">
+    </div>
+    <div class="brd pd" formArrayName="items">
+        <div *ngFor="let it of dynItms().controls; let id = index">
+            <input type="text" [formControlName]="id">
+        </div>
     </div>
     <div class="frm mg">
         <input type="submit">
