@@ -1,1 +1,28 @@
-<p>rect-form works!</p>
+<div>
+    <h4>Reactive Form</h4>
+</div>
+<form class="brd" [formGroup]="fg" (ngSubmit)="frmSb()">
+    <div class="frm">
+        <input type="text" formControlName="userName" placeholder="Username">
+        <input type="text" formControlName="email" placeholder="Email">
+    </div>
+    <div class="frm">
+        <input type="text" formControlName="mobile" placeholder="Mobile">
+        <input type="text" formControlName="password" placeholder="Password">
+    </div>
+    <div class="frm">
+        <input type="checkbox" value="plc" formControlName="device">
+        <select formControlName="dvType">
+            <option> Laptop </option>
+            <option> Desktop </option>
+            <option> Mobile </option>
+        </select>
+    </div>
+    <div class="frm brd pd">
+        <input type="text" placeholder="Shopping Items">
+        <input type="button" value="Add">
+    </div>
+    <div class="frm mg">
+        <input type="submit">
+    </div>
+</form>

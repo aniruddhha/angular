@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { DtIpComponent } from './dt-ip/dt-ip.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
@@ -28,7 +28,8 @@ import { RectFormComponent } from './rect-form/rect-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // for template driven forms
+    FormsModule, // for template driven forms
+    ReactiveFormsModule // reactive or data driven forms
     //import thirdparty modueles
   ],
   providers: [

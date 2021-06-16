@@ -1,0 +1,16 @@
+.frm {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.brd {
+    border: 1px dotted gainsboro;
+}
+
+.mg {
+    margin: 1em;
+}
+.pd {
+    padding: 1em;
+}
