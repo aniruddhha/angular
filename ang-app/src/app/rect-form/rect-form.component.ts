@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-rect-form',
@@ -8,18 +8,23 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class RectFormComponent implements OnInit {
 
-  fg: FormGroup
+  readonly brdInvalid = '1px solid red'
+  readonly brdValid = '1px solid green'
+
+  fg: FormGroup // actual form 
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder // helper class
   ) {
     this.fg = this.fb.group({
-      userName: this.fb.control(''),
-      email: this.fb.control(''),
-      mobile: this.fb.control(''),
-      password: this.fb.control(''),
-      device: this.fb.control(''),
-      dvType: this.fb.control('')
+      userName: this.fb.control('', Validators.required),
+      email: this.fb.control('', Validators.compose([
+        Validators.required, Validators.email
+      ])),
+      mobile: this.fb.control('', Validators.required),
+      password: this.fb.control('', Validators.required),
+      device: this.fb.control('', Validators.required),
+      dvType: this.fb.control('', Validators.required)
     });
   }
 
@@ -27,18 +32,11 @@ export class RectFormComponent implements OnInit {
 
   }
 
-  private initForm() {
-    this.fg = this.fb.group({
-      usNm: this.fb.control(''),
-      email: this.fb.control(''),
-      mobile: this.fb.control(''),
-      password: this.fb.control(''),
-      device: this.fb.control(''),
-      dvType: this.fb.control('')
-    });
-  }
-
   frmSb() {
     console.log(this.fg)
+  }
+
+  ctrl(nm: string): FormControl {
+    return this.fg.get(nm) as FormControl // recommended approach 
   }
 }

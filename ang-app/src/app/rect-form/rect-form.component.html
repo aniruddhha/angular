@@ -1,10 +1,12 @@
 <div>
     <h4>Reactive Form</h4>
 </div>
-<form class="brd" [formGroup]="fg" (ngSubmit)="frmSb()">
+<form [style.border]="fg.valid ? brdValid : brdInvalid" [formGroup]="fg" (ngSubmit)="frmSb()">
     <div class="frm">
-        <input type="text" formControlName="userName" placeholder="Username">
-        <input type="text" formControlName="email" placeholder="Email">
+        <input type="text" [style.border]="ctrl('userName').valid ? brdValid : brdInvalid " formControlName="userName"
+            placeholder="Username">
+        <input type="text" [style.border]="ctrl('email').valid ? brdValid : brdInvalid " formControlName="email"
+            placeholder="Email">
     </div>
     <div class="frm">
         <input type="text" formControlName="mobile" placeholder="Mobile">
