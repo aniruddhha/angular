@@ -1,5 +1,5 @@
-<div class="row">
-    <div class="box" [style.backgroundColor]="clr" (mouseenter)="clr='white'">
+<!-- <div class="row">
+        <div class="box" [style.backgroundColor]="clr" (mouseenter)="clr='white'">
         box1
     </div>
     <div class="box" style="{{bg}}">
@@ -18,4 +18,8 @@
 </div>
 <div class="cntr">
     <input type="text" [(ngModel)]="clr">
+</div> -->
+
+<div class="row" [style.backgroundColor]="bg">
+    <input type="button" value="Magic" (click)="onMagic()">
 </div>

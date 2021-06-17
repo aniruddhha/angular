@@ -16,6 +16,9 @@
   <p> Sub : {{ (framework | slice:2) | uppercase }} </p>
 </div> -->
 
+<div>
+  <app-header></app-header>
+</div>
 <div class="cnt-cntr">
   <a [routerLink]="['/contact', 10]" [routerLinkActive]="'active'">Contact</a>
   <a [routerLink]="['/home']" [routerLinkActive]="'active'">Home</a>

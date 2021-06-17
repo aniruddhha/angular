@@ -13,6 +13,7 @@ import { TempFromComponent } from './temp-from/temp-from.component';
 import { RectFormComponent } from './rect-form/rect-form.component';
 import { MenuComponent } from './home/menu/menu.component';
 import { MainComponent } from './home/main/main.component';
+import { HeaderService } from './header/header.service';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MainComponent } from './home/main/main.component';
   ],
   providers: [
     //import services
+    // HeaderService // --- per module
   ],
   bootstrap: [AppComponent]
 })

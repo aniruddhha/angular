@@ -1,13 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from './header.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  // providers: [HeaderService] --> per component 
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+
+  // component -> present -> ui
+  // pipe -> format -> ui
+  // service -> process -> background
+
+  constructor(
+    private magic: HeaderService // -> DI 
+  ) { }
 
   bg = "background-color: red"
   clr = ''
@@ -19,5 +28,9 @@ export class HeaderComponent implements OnInit {
     console.log(`On Color Clicked`)
     this.bg = `background-color: ${cl}`
     this.clr = cl
+  }
+
+  onMagic() {
+    this.bg = this.magic.magicColor()
   }
 }
