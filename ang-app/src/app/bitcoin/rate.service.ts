@@ -39,4 +39,8 @@ export class RateService {
     }
     return this.http.post(url, body, headers)
   }
+
+  errorHandler(err: Error) {
+    console.log(err)
+  }
 }

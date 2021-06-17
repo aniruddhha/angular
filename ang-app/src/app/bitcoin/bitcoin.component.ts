@@ -33,7 +33,7 @@ export class BitcoinComponent implements OnInit {
         console.log(obj)
         this.usdPr = obj.bpi.USD.rate
       }, // partial completeion
-      err => console.log(err), // error
+      this.rates.errorHandler, // error
       () => console.log(`Completed`) // complete
     )
   }
@@ -49,7 +49,8 @@ export class BitcoinComponent implements OnInit {
     }
 
     this.rates.create(formData).subscribe(
-      res => console.log(res)
+      res => console.log(res),
+      this.rates.errorHandler
     )
   }
 }
