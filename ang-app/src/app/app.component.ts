@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+
+// ng g c <name>
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
