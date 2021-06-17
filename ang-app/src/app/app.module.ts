@@ -14,6 +14,9 @@ import { RectFormComponent } from './rect-form/rect-form.component';
 import { MenuComponent } from './home/menu/menu.component';
 import { MainComponent } from './home/main/main.component';
 import { HeaderService } from './header/header.service';
+import { BitcoinComponent } from './bitcoin/bitcoin.component';
+
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { HeaderService } from './header/header.service';
     TempFromComponent,
     RectFormComponent,
     MenuComponent,
-    MainComponent
+    MainComponent,
+    BitcoinComponent
     //components
     //pipes
   ],
@@ -34,7 +38,8 @@ import { HeaderService } from './header/header.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule, // for template driven forms
-    ReactiveFormsModule // reactive or data driven forms
+    ReactiveFormsModule, // reactive or data driven forms
+    HttpClientModule
     //import thirdparty modueles
   ],
   providers: [
