@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AuthGuard } from './auth.guard';
 import { ContactComponent } from './contact/contact.component';
 import { DtIpComponent } from './dt-ip/dt-ip.component';
 import { HomeComponent } from './home/home.component';
@@ -9,7 +10,7 @@ import { TempFromComponent } from './temp-from/temp-from.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
   { path: 'contact/:addr', component: ContactComponent },
   { path: 'tmp', component: TempFromComponent },
   { path: 'rct', component: RectFormComponent },

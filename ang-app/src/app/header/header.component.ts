@@ -10,6 +10,8 @@ import { HeaderService } from './header.service';
 export class HeaderComponent implements OnInit {
 
 
+  // private colors = ['red', 'green', 'blue']
+
   // component -> present -> ui
   // pipe -> format -> ui
   // service -> process -> background
@@ -33,4 +35,9 @@ export class HeaderComponent implements OnInit {
   onMagic() {
     this.bg = this.magic.magicColor()
   }
+
+  // magicColor() {
+  //   const ind = Math.floor(Math.random() * 2) // 0.0 - 0.1 * 2 = complete(r < n)
+  //   return this.colors[ind]
+  // }
 }
